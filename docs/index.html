@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data UI Kit</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/styles-222a29d785.css"/>
+
+  <script src="assets/scripts/Vendor-7537aab91a.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron page-section">
+    <div class="wrapper">
+      <div class="jumbotron__text-content">
+        <h1 class="jumbotron__title">DATA <span class="jumbotron__title--green">UI</span> KIT</h1>
+        <img sizes="(max-width: 520px) 300px,
+                    (max-width: 600px) 500px,
+                    500px" srcset="assets/images/logo-small.png 300w,assets/images/logo.png 500w, assets/images/logo-hi-dpi.png 1027w" class="jumbotron__image" alt="data chart">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Graph -->
+  <div class="page-section chart">
+    <div class="wrapper">
+      <h1>Line graph</h1>
+      <div id="svg"></div>
+    </div>
+  </div>
+  
+  <!-- Stats -->
+  <div class="controls">
+      <div class="wrapper">
+        <label>
+          <select class="controls__select" id="mode">
+            <option value="visitors">Visitors</option>
+            <option value="visits">Visits</option>
+            <option value="page-views" selected="selected">Page Views</option>
+            <option value="organic-search">Organic Search</option>
+          </select>
+        </label>
+        <div class="controls__group">
+          <div class="controls__group__btn" id="day">Day</div>
+          <div class="controls__group__btn controls__group__btn--green" id="week">Week</div>
+          <div class="controls__group__btn" id="month">Month</div>
+        </div>
+        
+
+    </div>
+  </div>
+    <div class="page-section stats">
+    <div class="stats--gray">
+      <div class="wrapper">
+        
+        <div class="row" id="stats"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Table -->
+  <div class="page-section table">
+    <div class="wrapper">
+      <h1>Table view</h1>
+      
+      <table class="table" id="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Access</th>
+            <th>Status</th>
+            <th>IP</th>
+          </tr>
+        </thead>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="assets/scripts/App-f155b5bef1.js"></script>
+</body>
+
+</html>
