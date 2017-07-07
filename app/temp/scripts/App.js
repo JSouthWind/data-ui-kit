@@ -34327,6 +34327,8 @@ var Chart = function () {
 
       function updateData(data) {
 
+        var updateSpeed = 1000;
+
         // Scale the range of the data again 
         x.domain(d3.extent(data, function (d) {
           return d.id;
@@ -34340,16 +34342,16 @@ var Chart = function () {
 
         // Make the changes
         svg.select(".chart__line") // change the line
-        .duration(500).attr("d", line(data));
+        .duration(updateSpeed).attr("d", line(data));
 
         svg.select(".chart__area") // change the area
-        .duration(500).attr("d", area(data));
+        .duration(updateSpeed).attr("d", area(data));
 
         svg.select(".xaxis") // change the x axis
-        .duration(500).call(xAxis);
+        .duration(updateSpeed).call(xAxis);
 
         svg.select(".yaxis") // change the y axis
-        .duration(500).call(yAxis);
+        .duration(updateSpeed).call(yAxis);
 
         var mainG = d3.select('.main');
         mainG.selectAll(".chart__circle") // change the circle
@@ -34373,7 +34375,7 @@ var Chart = function () {
 
         setTimeout(function () {
           (0, _jquery2.default)('circle').addClass('chart__circle--is--visible');
-        }, 200);
+        }, 400);
       }
 
       return updateData;

@@ -91,6 +91,8 @@ class Chart {
       .attr("class", "chart__circle__inner");
     
     function updateData(data) {
+      
+      var updateSpeed = 1000;
 
       // Scale the range of the data again 
       x.domain(d3.extent(data, function(d) { return d.id; }));
@@ -101,19 +103,19 @@ class Chart {
 
       // Make the changes
       svg.select(".chart__line")   // change the line
-        .duration(500)
+        .duration(updateSpeed)
         .attr("d", line(data));
       
       svg.select(".chart__area")   // change the area
-        .duration(500)
+        .duration(updateSpeed)
         .attr("d", area(data));
       
       svg.select(".xaxis") // change the x axis
-        .duration(500)
+        .duration(updateSpeed)
         .call(xAxis);
       
       svg.select(".yaxis") // change the y axis
-        .duration(500)
+        .duration(updateSpeed)
         .call(yAxis);
       
       var mainG = d3.select('.main');
@@ -142,7 +144,7 @@ class Chart {
       
       setTimeout(function(){
         $('circle').addClass('chart__circle--is--visible')
-      }, 200);
+      }, 400);
 
     }
     
