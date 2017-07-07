@@ -1,3 +1,4 @@
+import $ from 'jquery';
 var d3 = require("d3");
 import d3TimeFormat from 'd3-time-format';
 
@@ -128,7 +129,7 @@ class Chart {
           .attr("r", 10)
           .attr("cx", (d) => x(d.id))
           .attr("cy", function(d) { return y(d.value); })
-          .attr("class", "chart__circle");
+          .attr("class", "circle--not chart__circle");
       }
       
       mainG.selectAll(".chart__circle__inner")
@@ -137,7 +138,11 @@ class Chart {
         .attr("r", 4)
         .attr("cx", (d) => x(d.id))
         .attr("cy", function(d) { return y(d.value); })
-        .attr("class", "chart__circle__inner");
+        .attr("class", "circle--not chart__circle__inner");
+      
+      setTimeout(function(){
+        $('circle').addClass('chart__circle--is--visible')
+      }, 200);
 
     }
     

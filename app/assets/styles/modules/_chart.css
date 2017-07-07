@@ -7,6 +7,8 @@
     @mixin atSmall {
       height: 500px;
     }
+    
+    
   }
   
   &__area {
@@ -22,10 +24,21 @@
     stroke-linecap: round;
   }
   
+  .circle--not {
+    opacity: 0;
+    transition: all .2s ease-out;
+    
+  }
+  
+  .chart__circle--is--visible {
+    opacity: 1!important;
+  }
+  
   &__circle{
     fill: white;
     stroke-width: 2px;
     stroke: $acsentColor;
+    
     
     &__inner {
       fill: $acsentColor;
