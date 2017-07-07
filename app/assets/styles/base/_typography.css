@@ -1,0 +1,17 @@
+h1 {
+  color: #34495e;
+  font-size: 1.5rem;
+  
+  @mixin atSmall {
+    font-size: 2rem;
+  }
+  
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

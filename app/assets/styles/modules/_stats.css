@@ -1,0 +1,33 @@
+.stats {
+  &--gray {
+    background-color: #fafafa;
+    text-align: center;
+    padding: 10px 0;
+    
+    @mixin atMedium {
+      padding: 22px 0;
+    }
+  }
+  
+  &__title {
+    color: #152e34;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+
+    @mixin atMedium {
+      font-size: 3rem;
+    }
+  }
+  
+  &__subtitle {
+    color: $acsentColor;
+    font-size: .5rem;
+    margin-top: -13px;
+
+    @mixin atMedium {
+      font-size: .75rem;
+      margin-top: 5px;
+
+    }
+  }
+}

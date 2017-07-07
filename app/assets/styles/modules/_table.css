@@ -1,0 +1,94 @@
+.table {
+  width: 100%;
+  font-size: .9rem;
+  table-layout: fixed;
+  
+  table {
+    text-align: center;
+  }
+  
+.dataTables_length {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+  label {position:relative}
+  label:after {
+    content: "\25BE";
+    color: $textColor;
+    right:68px; 
+    top:-6px;
+    position:absolute;
+    pointer-events:none;
+  }
+  }
+  
+  .dataTables_length select {
+    font-family: 'Open Sans', sans-serif;
+    width: 90px;
+    background-color: white;
+    color: $textColor;
+    font-size: .87rem;
+    font-weight: 100;
+    padding: 12px 8px 12px 13px;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    border: 2px solid #ededed;
+    cursor: pointer;
+  }
+  
+  
+  #table_filter {
+    float: right;
+    margin: 10px 15px;
+    
+    input {
+      height: 50px;
+      width: 250px;
+      border: 2px solid #ededed;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+  }
+  
+  th {
+    background-color: $mainColor;
+    color: white;
+    font-weight: 100;
+    padding: 0px;
+    cursor: pointer;
+    
+    @mixin atMedium {
+      padding: 10px;
+    }
+  }
+  
+  td {
+    padding: 5px;
+    
+  }
+  
+  & .paginate_button.current {
+    color: $acsentColor;
+    padding: 3px;
+  }
+  
+  & .paginate_button {
+    color: $textColor;
+    padding: 3px;
+  }
+  
+  & .dataTables_paginate {
+    float: right;
+  }
+  
+  
+  & .dataTables_info {
+    float: left;
+    color: $acsentColor
+  }
+}

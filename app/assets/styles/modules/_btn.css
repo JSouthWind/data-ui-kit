@@ -1,0 +1,22 @@
+.btn {
+  color: #fff;
+  background-color: #222;
+  text-decoration: none;
+  padding: .4rem 1rem;
+  display: inline-block;
+  margin-top: 5px;
+  border-radius: 2px;
+  
+  &:hover {
+    text-decoration: none;
+  }
+
+  &--large {
+    padding: 0.8rem 1.6rem;
+
+    @mixin atSmall {
+      font-size: 1.2rem;
+    }
+  }
+
+}

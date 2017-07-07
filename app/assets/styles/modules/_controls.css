@@ -1,0 +1,78 @@
+.controls {
+  &__select {
+    font-family: 'Open Sans', sans-serif;
+    width: 90px;
+    background-color: $mainColor;
+    color: white;
+    font-size: .87rem;
+    font-weight: 100;
+    border: 0;
+    border-radius: 0;
+    padding: 12px 8px 12px 13px;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    
+    @mixin atMedium {
+      padding: 20px 30px 20px 30px;
+      width: 240px;
+      font-size: 1rem;
+      
+    }
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  label {position:relative}
+  label:after {
+    content: "\25BE";
+    color: white;
+    right:18px; 
+    top:-3px;
+    position:absolute;
+    pointer-events:none;
+  }
+  
+  &__group{
+    display: inline;
+    margin-left: 10px;
+    
+    @mixin atMedium {
+      margin-left: 50px;
+
+    }
+    
+    &__btn {
+      text-align: center;
+      background-color: $mainColor;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 100;
+      padding: 5px 8px;
+      width: 60px;
+      cursor: pointer;
+      display: table-cell;
+      
+      @mixin atMedium {
+        padding: 14px 30px;
+        width: 130px;
+        font-size: 1rem;
+      }
+      
+      &--green {
+        background-color: $acsentColor;
+      }
+      
+    }
+    
+  }
+ 
+  
+}

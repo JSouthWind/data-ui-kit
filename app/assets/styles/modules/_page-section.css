@@ -1,0 +1,25 @@
+.page-section {
+  padding: 1.2rem 0;
+  background-color: white;
+
+  @mixin atMedium {
+    padding: 4.5rem 0;
+  }
+
+  &--no-b-padding-until-medium {
+    padding-bottom: 0;
+
+    @mixin atMedium {
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  &--no-b-padding-until-large {
+    padding-bottom: 0;
+
+    @mixin atMedium {
+      padding-bottom: 4.5rem;
+    }
+  }
+
+}

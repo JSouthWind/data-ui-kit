@@ -1,0 +1,42 @@
+.chart {
+  
+  #svg {
+    width: 100%;
+    height: 300px;
+    
+    @mixin atSmall {
+      height: 500px;
+    }
+  }
+  
+  &__area {
+    fill: rgba($acsentColor, .1);
+    stroke-width: 2px;
+    stroke-linecap: round;
+  }
+  
+  &__line {
+    fill: none;
+    stroke-width: 2px;
+    stroke: $acsentColor;
+    stroke-linecap: round;
+  }
+  
+  &__circle{
+    fill: white;
+    stroke-width: 2px;
+    stroke: $acsentColor;
+    
+    &__inner {
+      fill: $acsentColor;
+    }
+  }
+  
+  .domain, .tick line{
+    stroke: $textColor;
+
+  }
+  text {
+    fill: $textColor;
+  }
+}

@@ -1,0 +1,43 @@
+.jumbotron {
+  position: relative;
+  background-color: $mainColor;
+  height: 400px;
+  @mixin atMedium {
+    height: 500px;
+  }
+  
+  &__text-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    font-weight: 700;
+    
+  }
+  
+  &__title {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    
+    &--green {
+      color: $acsentColor;
+    }
+    
+    @mixin atSmall {
+      font-size: 3rem;
+    }
+    
+    @mixin atMedium {
+      font-size: 3rem;
+    }
+  }
+  
+  &__image {
+    margin-top: 30px;
+  }
+  
+  
+}
